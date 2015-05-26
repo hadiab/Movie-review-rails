@@ -1,4 +1,6 @@
 class Movie < ActiveRecord::Base
+  searchkick
+  #Movie.reindex
   belongs_to :user
   has_many :reviews
   has_attached_file :image, styles: { medium: "400x600#" }
